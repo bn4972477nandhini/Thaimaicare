@@ -1,0 +1,189 @@
+body{
+  background-color: rgb(15, 151, 197);
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   
+}
+
+.header {
+  background-color:white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 1530px;
+  margin-left: 3  0px;
+ 
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #234070;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #c2185b;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 15px;
+  color: #070707;
+}
+#parent p{
+color: green;
+}
+
+.header-title {
+  text-align: center;
+  flex: 1;
+}
+
+.header-title h2 {
+  margin: 0;
+  color: #d63384;
+  font-size: 26px;
+  }
+  
+
+  .header-title p {
+    font-size: 17px;
+    color: #080202;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color:black;
+    margin-top: 60px;
+    font-weight:bold;
+  }
+
+  .back-btn:hover {
+    background-color: #d63384;
+  }
+
+.donate-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: rgb(15, 151, 197);
+  flex-wrap: wrap;
+}
+
+.donate-intro img {
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donate-intro .text {
+  max-width: 500px;
+}
+
+.donate-intro h2 {
+  color: #b50a5f;
+}
+
+.donate-intro p {
+  color:white;
+  font-size: 14;
+  
+}
+
+
+.donate-form-section {
+  text-align: center;
+  padding: 40px;
+  background-color:rgb(223, 231, 236);
+  width: 700px;
+  margin-left: 450px;
+  border-radius: 30px;
+}
+
+.donate-form-section h2 {
+  color: #ed077a;
+}
+.donate-form-section p {
+  color: #040404;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.donate-form {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.donate-form label {
+  font-weight: bold;
+  color: #070707;
+}
+
+.donate-form input,
+.donate-form select,
+.donate-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* .donate-form input:focus, */
+.donate-form textarea:focus {
+  border-color: #d63384;
+}
+
+.submit-btn {
+  background-color: #c50f4c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #d63384;
+}
+
+.thankyou {
+  text-align: center;
+  padding: 40px;
+  background-color: rgb(15, 151, 197);
+  margin-top: 40px;
+}
+
+.thankyou h2 {
+  color: #c2185b;
+}
+
+
+footer {
+  text-align: center;
+  background-color: white;
+  padding: 12px;
+  color: #333;
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Request - ThaaimaiCare</title>
+  <link rel="stylesheet" href="../styles/emergency.css" />
+</head>
+<body>
+  <header class="header">
+    
+      <div class="logo-section">
+        <img src="../assets/feeding.jpg" alt="feeding" />
+        <div class="logo-text">
+          <h1>ThaaimaiCare</h1>
+          <p>Motherhood. Shared. Safe.</p>
+        </div>
+      </div>
+
+     
+      <div class="header-title">
+      <h1>🚨 Emergency Request</h1>
+      <p>Helping babies get milk fast — every second counts!</p>
+      </div>
+
+      
+      <a href="../index.html" class="back-btn">⬅ Back to Home</a>
+    </header>
+
+  <section class="intro">
+    <img src="../assets/emergency-baby-milk.png" alt="Emergency baby care" class="hero-img" />
+    <div class="text">
+      <h2>Why Emergency Milk Requests Matter</h2>
+      <p>
+        Some babies, especially premature or sick infants, need breast milk immediately to survive and recover.  
+        ThaaimaiCare ensures that emergency requests are prioritized and shared instantly with nearby donors.
+      </p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>📍 Step 1: Location Tracking</h3>
+        <p>Our system finds the nearest available donors based on your location.</p>
+      </div>
+      <div class="step">
+        <h3>🔔 Step 2: Instant Alerts</h3>
+        <p>Nearby donors receive notifications to respond immediately.</p>
+      </div>
+      <div class="step">
+        <h3>❤️ Step 3: Fast Response</h3>
+        <p>Milk is collected and delivered safely — ensuring no baby goes hungry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Submit Emergency Request form</h2>
+    <form class="emergency-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter  name" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" placeholder="City / Area" required />
+
+      <label for="urgency">Urgency Level:</label>
+      <select id="urgency" required>
+        <option value="">--Select--</option>
+        <option value="critical">Critical (Immediate)</option>
+        <option value="high">High</option>
+        <option value="moderate">Moderate</option>
+      </select>
+
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" placeholder="Enter phone number" required />
+
+      <button type="submit">🚨 Send Emergency Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ThaaimaiCare | Together, we act fast to save tiny lives 💖</p>
+  </footer>
+  <script src="../Javascript/emergency.js"></script>
+</body>
+</html>

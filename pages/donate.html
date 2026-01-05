@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Milk - ThaaimaiCare</title>
+    <link rel="stylesheet" href="../styles/donate.css" />
+  </head>
+  <body>
+    <header class="header">
+    
+      <div class="logo-section">
+        <img src="../assets/feeding.jpg" alt="feeding" />
+        <div class="logo-text">
+          <h1>ThaaimaiCare</h1>
+          <p>Motherhood. Shared. Safe.</p>
+        </div>
+      </div>
+
+     
+      <div class="header-title">
+        <h2>🤱 Donate Breast Milk</h2>
+        <p>Share the gift of life — one drop at a time.</p>
+      </div>
+
+      
+      <a href="../index.html" class="back-btn">⬅ Back to Home</a>
+    </header>
+
+    <section class="donate-intro">
+      <img src="../assets/donate.jpg" alt="Donate Milk" />
+      <div class="text">
+        <h2>Be a Milk Donor</h2>
+        <p>
+          Your breast milk can save the lives of premature and sick babies.  
+          Join our network of kind mothers who share their extra milk to help those in need.  
+          Every donation brings hope, health, and happiness to another family.
+        </p>
+      </div>
+    </section>
+
+    <section class="donate-form-section">
+      <h2>🩷 Fill Out the Donor Form</h2>
+      <p>Submit your details and our team will reach out to guide you through the safe donation process.</p>
+      <div id = "parent" ></div>
+
+      <form class="donate-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your contact number" required />
+
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="City / Area" required />
+
+        <label for="availability">Availability</label>
+        <select id="availability">
+          <option value="">Select</option>
+          <option value="available"> Donate now</option>
+          <option value="soon">I Donate later </option>
+        </select>
+
+        <label for="message">Message (optional)</label>
+        <textarea id="message" rows="4" placeholder="Add a note or question..."></textarea>
+
+        <button type="submit" class="submit-btn" id = "form_button">Submit Donation Form</button>
+        <p id="successMsg" ></p>
+
+      </form>
+    </section>
+
+    <section class="thankyou">
+      <h2>💖 Thank You for Supporting Motherhood</h2>
+      <p>
+        Your kindness makes the world a warmer, safer place for every baby.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 ThaaimaiCare | Together, We Nurture Life 🤱</p>
+    </footer>
+    <script src="../js/donate.js"></script>
+  </body>
+</html>
