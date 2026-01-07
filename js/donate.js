@@ -6,6 +6,7 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    alert("You sumbitted successfully!")
     
 
     let name = document.getElementById("name").value.trim();
