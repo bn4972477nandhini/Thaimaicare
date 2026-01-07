@@ -17,16 +17,8 @@ form.addEventListener("submit", function (e) {
     alert("Please enter your email");
     return;
   }
-  if (!email.includes("@") || !email.includes(".")) {
-    alert("Please enter a valid email address");
-    return;
-  }
   if (phone === "") {
     alert("Please enter your phone number");
-    return;
-  }
-  if (phone.length !== 10 || isNaN(phone)) {
-    alert("Phone number must be 10 digits");
     return;
   }
   if (location === "") {
