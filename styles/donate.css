@@ -71,9 +71,7 @@ color: green;
     font-weight:bold;
   }
 
-  .back-btn:hover {
-    background-color: #d63384;
-  }
+  
 
 .donate-intro {
   display: flex;

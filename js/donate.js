@@ -5,6 +5,8 @@ form.addEventListener("submit", function (e) {
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
+  let age = document.getElementById("age").value.trim();
+  let month = document.getElementById("month").value.trim();
   let phone = document.getElementById("phone").value.trim();
   let location = document.getElementById("location").value.trim();
   let availability = document.getElementById("availability").value;
