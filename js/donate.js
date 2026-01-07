@@ -2,9 +2,12 @@ const form = document.querySelector("form");
 const btn = document.getElementById("form_button");
 const parent = document.getElementById("parent");
 
+const namePattern = /^[A-Za-z\s]+$/;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phonePattern = /^[0-9]{10}$/;
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();   
+  e.preventDefault();  
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
