@@ -5,7 +5,7 @@
 
 
   form.addEventListener("submit", function (e) {
-    alert("Form submitted successfully")
+    e.preventDefault();
     
 
     let name = document.getElementById("name").value.trim();
@@ -13,9 +13,6 @@
     let phone = document.getElementById("phone").value.trim();
     let location = document.getElementById("location").value.trim();
     let availability = document.getElementById("availability").value;
-
-
-
 
     if (name === "") {
       alert("Please enter your name");
