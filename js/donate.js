@@ -1,13 +1,7 @@
 const form = document.querySelector("form");
-const btn = document.getElementById("form_button");
-const parent = document.getElementById("parent");
-
-const namePattern = /^[A-Za-z\s]+$/;
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phonePattern = /^[0-9]{10}$/;
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();  
+  e.preventDefault();   
 
   let name = document.getElementById("name").value.trim();
   let email = document.getElementById("email").value.trim();
@@ -17,30 +11,32 @@ form.addEventListener("submit", function (e) {
 
   if (name === "") {
     alert("Please enter your name");
-  } 
-  else if (!namePattern.test(name)) {
-    alert("Name should contain only letters");
+    return;
   }
-  else if (email === "") {
+  if (email === "") {
     alert("Please enter your email");
+    return;
   }
-  else if (!emailPattern.test(email)) {
+  if (!email.includes("@") || !email.includes(".")) {
     alert("Please enter a valid email address");
+    return;
   }
-  else if (phone === "") {
+  if (phone === "") {
     alert("Please enter your phone number");
+    return;
   }
-  else if (!phonePattern.test(phone)) {
+  if (phone.length !== 10 || isNaN(phone)) {
     alert("Phone number must be 10 digits");
+    return;
   }
-  else if (location === "") {
+  if (location === "") {
     alert("Please enter your location");
+    return;
   }
-  else if (availability === "") {
+  if (availability === "") {
     alert("Please select your availability");
+    return;
   }
-  else {
-    alert("Thank you for registering as a milk donor!");
-    form.reset();
-  }
+  alert("Thank you for registering as a milk donor!");
+  form.reset();
 });
