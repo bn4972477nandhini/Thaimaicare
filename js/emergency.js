@@ -29,6 +29,6 @@ form.addEventListener("submit", function (e) {
     alert("Please select your urgency level");
     return;
   }
-  alert("Thank you for registering as a milk donor!");
+  alert("Thank you for emergency registering as a milk donor!");
   form.reset();
 });

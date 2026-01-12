@@ -114,7 +114,7 @@
       .container h1{
         margin-left: 50px;
         font-size: 60px;
-        color:#052352;
+        color:white;
         font-weight: 900px;
       }
       .container h2{
@@ -124,12 +124,12 @@
         color:lightgray;
 
       }
-      .cont {
-        display: flex;
-        flex-direction: row;
-        margin-top: 50px;
-        margin-left: 300px;
-        gap: 20px;
+  .cont {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 300px;
+    gap: 20px;
 
       } 
       .cont img{
@@ -186,7 +186,8 @@
   text-decoration: none;
   margin-top: 50px;
   margin-left: 70px;
-  color:rgb(219, 66, 138); ;
+  color: black;
+  /* color:rgb(219, 66, 138);  */
   font-size: 22px;
   font-weight: bold;
 }

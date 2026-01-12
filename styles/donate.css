@@ -94,11 +94,13 @@ color: green;
 }
 
 .donate-intro h2 {
-  color: #b50a5f;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
 }
 
 .donate-intro p {
-  color:white;
+  color:rgb(10, 10, 10);
   font-size: 14;
   
 }

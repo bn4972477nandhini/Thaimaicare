@@ -1,0 +1,153 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(15, 151, 197);
+  margin: 0;
+  color: #333;
+}
+
+.header {
+  background-color:white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 1530px;
+  margin-left: 30px;
+  height:80px;
+ 
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #234070;
+}
+
+.logo-text h1 {
+ 
+  font-size: 30px;
+  color:#2b7bb9;
+}
+
+.logo-text p {
+  
+  font-size: 16px;
+  color: #070707;
+}
+
+.header-title {
+  text-align: center;
+  /* flex: 1; */
+}
+
+.header,
+.logo-section,
+.header-title h2 {
+  
+  color: #d63384;
+  font-size: 18px;
+  }
+  
+
+  .header-title p {
+    font-size: 18px;
+    color: #080202;
+  }
+
+  .back-btn {
+    text-decoration: none;
+    color:black;
+    margin-top: 60px;
+    font-weight:bold;
+    font-size: 17px;
+    margin-right: 10px;
+  }
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.hero-img {
+  width: 400px;
+  border-radius: 12px;
+  margin: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.text {
+  max-width: 500px;
+  margin: 15px;
+}
+
+.text h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.text p{
+  color:black;
+  font-size: 16px;
+}
+.how-it-works h2{
+  color:white;
+}
+
+.how-it-works {
+  text-align: center;
+  padding: 40px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  width: 280px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.step img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.step h3 {
+  color: #c2185b;
+}
+
+
+
+
+.emergency-form button:hover {
+  background-color: #b71c1c;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 40px;
+}
