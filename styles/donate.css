@@ -124,7 +124,7 @@ color: green;
   font-weight: bold;
 }
 
-.donate-form {
+#donate-form {
   max-width: 500px;
   margin: 20px auto;
   text-align: left;
@@ -133,14 +133,14 @@ color: green;
   gap: 15px;
 }
 
-.donate-form label {
+#donate-form label {
   font-weight: bold;
   color: #070707;
 }
 
-.donate-form input,
-.donate-form select,
-.donate-form textarea {
+#donate-form input,
+#donate-form select,
+#donate-form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ffb6c1;
@@ -149,7 +149,7 @@ color: green;
 }
 
 /* .donate-form input:focus, */
-.donate-form textarea:focus {
+#donate-form textarea:focus {
   border-color: #d63384;
 }
 

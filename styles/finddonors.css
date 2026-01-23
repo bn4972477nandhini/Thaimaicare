@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   background-color: rgb(15, 151, 197);
   color: #333;
-  line-height: 1.6;
+  line-height: 1.6; 
   /* background-color: rgb(148, 183, 219); */
 } 
 
@@ -77,7 +77,7 @@ body {
     font-size: 17px;
     margin-right: 10px;
   }
-.donor{
+/* .donor{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;                              
   margin: 70px auto;
@@ -102,4 +102,35 @@ body {
 .names ul{
     list-style-type: none;
     margin-left: 20px;
+} 
+
+
+ */
+
+
+
+
+/* new css */
+
+.donor-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.donor-card {
+  background: #fff;
+  width: 320px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.donor-card p {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: 600;
 }
