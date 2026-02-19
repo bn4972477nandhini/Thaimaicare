@@ -77,40 +77,29 @@ body {
     font-size: 17px;
     margin-right: 10px;
   }
-/* .donor{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;                              
-  margin: 70px auto;
-  margin-left: 50px;
-  font-weight: bold;
-  font-size: 18px;
- 
+
+.search{
+  margin-left: 700px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 20px;
+
 }
-.donor div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+.search input{
+  height: 50px;
+  padding: 25px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 2px solid seashell;
 }
-.place,
-.names{
-  background-color: #ffffff;               
-  padding: 10px;            
-  border-radius: 10px;        
-  width: 300px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.search button{
+  height: 50px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 2px solid seashell;
 }
-.names ul{
-    list-style-type: none;
-    margin-left: 20px;
-} 
 
 
- */
-
-
-
-
-/* new css */
 
 .donor-container {
   display: flex;
@@ -122,7 +111,7 @@ body {
 
 .donor-card {
   background: #fff;
-  width: 320px;
+  width: 350px;
   padding: 20px 25px;
   border-radius: 15px;
   font-family: Arial, sans-serif;
@@ -133,4 +122,7 @@ body {
   font-size: 18px;
   margin: 10px 0;
   font-weight: 600;
+}
+#donorContainer p{
+  color:#d63384;
 }
