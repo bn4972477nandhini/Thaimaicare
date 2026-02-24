@@ -20,6 +20,10 @@ const db = getFirestore(app);
 const donorContainer = document.getElementById("donorContainer");
 let allDonors = [];
 
+window.handleButton = function () {
+  window.location.href = "../pages/reviewsendform.html";
+};
+
 function displayDonor(data) {
   const card = document.createElement("div");
   card.classList.add("donor-card");
@@ -33,7 +37,7 @@ function displayDonor(data) {
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Availability:</strong> ${data.availability}</p>
     <p><strong>Message:</strong> ${data.message}</p>
-    
+    <button id="donorbtn" onclick="handleButton()">Contact donor</button>
   `;
 
   donorContainer.appendChild(card);

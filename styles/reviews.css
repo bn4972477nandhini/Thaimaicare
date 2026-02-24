@@ -162,35 +162,12 @@ footer {
 }
 
 
-/* .RS-form-section{
-  background-color: white;
 
-  width: 600px;
-  justify-items: center;
-  margin-left: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius:  20px;
-  
-
-}
-#RS-form{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 200px;
- 
-  
-
-  
-}  */
-
-/* ===== ONLY REVIEW FORM DESIGN ===== */
 
 .RS-form-section{
   background: white;
   width: 500px;
-  margin: 60px auto;   /* center align */
+  margin: 60px auto;   
   padding: 30px 40px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -202,20 +179,19 @@ footer {
   margin-bottom: 25px;
 }
 
-/* form layout */
+
 #RS-form{
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* label style */
+
 #RS-form label{
   font-weight: 600;
   color: #333;
 }
 
-/* input fields */
 #RS-form input{
   padding: 12px;
   border-radius: 8px;
@@ -225,13 +201,12 @@ footer {
   transition: 0.3s;
 }
 
-/* focus effect */
 #RS-form input:focus{
   border-color: #0f97c5;
   box-shadow: 0 0 6px rgba(15,151,197,0.4);
 }
 
-/* submit button */
+
 #RS-form button{
   margin-top: 10px;
   padding: 12px;

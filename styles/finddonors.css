@@ -126,3 +126,16 @@ body {
 #donorContainer p{
   color:#d63384;
 }
+
+
+#donorbtn{
+justify-content: center;
+background: linear-gradient(135deg, #89f7fe, #66a6ff);
+padding: 10px;
+border-radius: 10px;
+margin-left: 90px;
+box-shadow: 0 5px 5px slategray;
+color: rgb(200, 12, 43);
+border: 1px solid slategray;
+font-size: 16px;
+}

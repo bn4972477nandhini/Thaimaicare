@@ -1,14 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Milk - ThaaimaiCare</title>
     <link rel="stylesheet" href="../styles/donate.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("u-6Nn4TQLR499YjXd");
+      })();
+      window.onload = function (){
+        document
+        .getElementById("donate-form")
+        .addEventListener("submit",function(event){
+          event.preventDefault();
+          emailjs.sendForm
+           ('service_mttbasm',
+                 'template_9zg4a6a',
+                 this
+                ).then(()=>{
+                   emailjs.sendForm(
+                        'service_mttbasm',
+                        'template_kseyqwh',
+                        this);
+                    alert("Message send successfully");
+                    this.reset();
+                },
+                (error)=>{
+                alert("Message failed to send"),console.log(error);
+              }
+            );
+        });
+      };
+    </script>
   </head>
   <body>
     <header class="header">
-    
       <div class="logo-section">
         <img src="../assets/feeding.jpg" alt="feeding" />
         <div class="logo-text">
@@ -17,13 +48,11 @@
         </div>
       </div>
 
-     
       <div class="header-title">
         <h2>🤱 Donate Breast Milk</h2>
         <p>Share the gift of life — one drop at a time.</p>
       </div>
 
-      
       <a href="../index.html" class="back-btn">⬅ Back to Home</a>
     </header>
 
@@ -32,58 +61,101 @@
       <div class="text">
         <h2>Be a Milk Donor</h2>
         <p>
-          Your breast milk can save the lives of premature and sick babies.  
-          Join our network of kind mothers who share their extra milk to help those in need.  
-          Every donation brings hope, health, and happiness to another family.
+          Your breast milk can save the lives of premature and sick babies. Join
+          our network of kind mothers who share their extra milk to help those
+          in need. Every donation brings hope, health, and happiness to another
+          family.
         </p>
       </div>
     </section>
 
     <section class="donate-form-section">
       <h2>🩷 Fill Out the Donor Form</h2>
-      <p>Submit your details and our team will reach out to guide you through the safe donation process.</p>
-      <div id = "parent" ></div>
+      <p>
+        Submit your details and our team will reach out to guide you through the
+        safe donation process.
+      </p>
+      <div id="parent"></div>
 
       <form id="donate-form">
         <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name" required />
+        <input
+        name="name"
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
+          required
+        />
 
         <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Enter your email" required />
+        <input
+        name="email"
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
 
         <label for="age">Age</label>
-        <input type="text" id="age" placeholder="Enter your age" required maxlength="2"/>
+        <input
+        name="age"
+          type="text"
+          id="age"
+          placeholder="Enter your age"
+          required
+          maxlength="2"
+        />
 
         <label for="month">Month</label>
-        <input type="text" id="month" placeholder="Enter your Month" required maxlength="2" />
+        <input
+        name="month"
+          type="text"
+          id="month"
+          placeholder="Enter your Month"
+          required
+          maxlength="2"
+        />
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Enter your contact number"  maxlength="10"/>
+        <input
+        name="phone"
+          type="tel"
+          id="phone"
+          placeholder="Enter your contact number"
+          maxlength="10"
+        />
 
         <label for="location">Location</label>
-        <input type="text" id="location" placeholder="City / Area" required />
+        <input type="text" name="location" id="location" placeholder="City / Area" required />
 
         <label for="availability">Availability</label>
         <select id="availability">
           <option value="">Select</option>
-          <option > Donate now</option>
-          <option >I Donate later </option>
+          <option>Donate now</option>
+          <option>I Donate later</option>
         </select>
 
+        <label for="name">RCH Id(12 Digits number)</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+
         <label for="message">Message (optional)</label>
-        <textarea id="message" rows="4" placeholder="Add a note or question..."></textarea>
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          placeholder="Add a note or question..."
+        ></textarea>
 
-        <button type="submit" class="submit-btn" id = "form_button">Submit Donation Form</button>
-        <p id="successMsg" ></p>
-
+        <button type="submit" class="submit-btn" id="form_button">
+          Submit Donation Form
+        </button>
+        <p id="successMsg"></p>
       </form>
     </section>
 
     <section class="thankyou">
       <h2>💖 Thank You for Supporting Motherhood</h2>
-      <p>
-        Your kindness makes the world a warmer, safer place for every baby.
-      </p>
+      <p>Your kindness makes the world a warmer, safer place for every baby.</p>
     </section>
 
     <footer>
