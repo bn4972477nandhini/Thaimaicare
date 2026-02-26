@@ -42,18 +42,20 @@ form.addEventListener("submit", async (e) => {
   }
 
   try {
-    await addDoc(collection(db, "users"), {
-      name,
-      email,
-      age,
-      month,
-      phone_number: phone,
-      location,
-      location_lower: location.toLowerCase(),
-      availability,
-      message,
-      createdAt: serverTimestamp()
-    });
+    const docRef = await addDoc(collection(db, "users"), {
+  name,
+  email,
+  age,
+  month,
+  phone_number: phone,
+  location,
+  location_lower: location.toLowerCase(),
+  availability,
+  message,
+  createdAt: serverTimestamp()
+});
+
+console.log("Document ID:", docRef.id);
 
     alert("✅ Data saved successfully!");
     form.reset();

@@ -128,7 +128,7 @@ body {
 }
 
 
-#donorbtn{
+.contact-btn{
 justify-content: center;
 background: linear-gradient(135deg, #89f7fe, #66a6ff);
 padding: 10px;

@@ -37,28 +37,6 @@ form.addEventListener("submit",(e)=>{
   const comment = document.getElementById("comment").value;
   const location = document.getElementById("location").value;
   //const imageFile = document.getElementById("image-upload").files[0];
-
-  // // let imageURL = "";
-
- 
-  // // if(imageFile){
-  // //   imageURL = URL.createObjectURL(imageFile);
-  // // }
-
-  
-  // const reviewDiv = document.createElement("div");
-  // reviewDiv.classList.add("review");
-
-  // reviewDiv.innerHTML = `
-  //   ${imageURL ? `<img src="${imageURL}" class="user-img">` : ""}
-  //   <p>"${comment}"</p>
-  //   <span>- ${name}, ${location}</span>
-  // `;
-
-
-  // reviewContainer.appendChild(reviewDiv);
-
-  // form.reset();
   try {
       addDoc(collection(db, "milkReviews"), {
         name,
@@ -92,7 +70,7 @@ async function loadReviews(){
     reviewContainer.innerHTML += `
       <div class="review-card">
         <h3>${data.name}</h3>
-        <p>${data.comment}</p>
+        <h5>${data.comment}</h5>
         <span>${data.location}</span>
       </div>
     `;

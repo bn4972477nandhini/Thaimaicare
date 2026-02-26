@@ -28,6 +28,16 @@ function displayDonor(data) {
   const card = document.createElement("div");
   card.classList.add("donor-card");
 
+  const btn = document.createElement("button");
+  btn.textContent = "Contact donor";
+  btn.classList.add("contact-btn");
+
+  // pass firebase document id
+  btn.addEventListener("click", () => {
+    window.location.href = `reviewsendform.html?id=${data.id}`;
+  });
+  console.log(data.id)
+
   card.innerHTML = `
     <p><strong>Donor Name:</strong> ${data.name}</p>
     <p><strong>Email:</strong> ${data.email}</p>
@@ -37,9 +47,10 @@ function displayDonor(data) {
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Availability:</strong> ${data.availability}</p>
     <p><strong>Message:</strong> ${data.message}</p>
-    <button id="donorbtn" onclick="handleButton()">Contact donor</button>
+    
   `;
 
+  card.appendChild(btn);
   donorContainer.appendChild(card);
 }
 
@@ -52,11 +63,15 @@ window.loadDonors = async function () {
 
   snapshot.forEach(doc => {
     const data = doc.data();
-    allDonors.push(data);
-    displayDonor(data);
-  });
-};
-
+    const id = doc.id;
+    const donorData = {id, ...data};
+    allDonors.push(donorData);
+    displayDonor(donorData);
+   
+    
+  
+});
+}
 window.searchLocation = function () {
   const value = document.getElementById("searchInput").value.toLowerCase();
 

@@ -27,10 +27,11 @@ body {
 }
 
 
-#milk-reviews {
+#milk-request {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  
 }
 
 label {
@@ -70,23 +71,124 @@ button {
 button:hover {
   background: #4a90e2;
 }
+
+#donorName{
+  color:#4a90e2;
+}
+#donorLocation{
+  color: #4a90e2;
+}
+
+
 </style>
 <body>
+  
     <section class="review-form">
-   <form id="milk-reviews">
+      <h2 id="donorName"></h2>
+      <h4 id="donorLocation"></h4>
+      
+   <form id="milk-request">
 
     <label for="name">Name</label>
-    <input type="text" id="name" >
+    <input type="text" id="name" placeholder="Enter your name" >
 
     <label for="phone">Phone</label>
-    <input type="text" id="phone">
+    <input type="text" id="phone" placeholder="Mobile number">
 
     <label for="email">Email</label>
-    <input type="text" id="email">
+    <input type="text" id="email"placeholder="Your Email id">
 
     <label for="message">Message</label>
     <input type="text" id="message">
+
+    <button>Submit</button>
+
+
    </form>
     </section>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="module">
+
+// firebase import
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { getFirestore, doc, getDoc }
+
+from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+let donorEmail = "";
+// config
+const firebaseConfig = {
+  apiKey: "AIzaSy...",
+  authDomain: "thaaimaicare-donate-form.firebaseapp.com",
+  projectId: "thaaimaicare-donate-form",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// URL la id eduthu
+const params = new URLSearchParams(window.location.search);
+const donorId = params.get("id");
+
+// donor fetch
+async function loadDonor() {
+  const docRef = doc(db, "users", donorId);
+  const docSnap = await getDoc(docRef);
+
+  if(docSnap.exists()){
+    const data = docSnap.data();
+
+    document.getElementById("donorName").textContent =
+      "Donor Name: " + data.name;
+
+    document.getElementById("donorLocation").textContent =
+      "Location: " + data.location;
+
+    donorEmail = data.email;
+  }
+}
+
+loadDonor();
+emailjs.init("u-6Nn4TQLR499YjXd");
+
+document.getElementById("milk-request")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  if(!donorEmail){
+    alert("Donor email not loaded yet");
+    return;
+  }
+
+  const templateParams = {
+    to_email: donorEmail, // donor ku pogum
+    from_name: name,
+    from_email: email,
+    phone: phone,
+    message: message
+  };
+
+  emailjs.send("service_mttbasm", "template_bncv3z6", templateParams)
+  .then(()=>{
+    alert("Message sent to donor ✅");
+    document.getElementById("milk-request").reset();
+  })
+  .catch(error=>{
+    console.log(error);
+    alert("Failed to send email ❌");
+  });
+
+});
+
+</script>
+
+
+
+
 </body>
 </html>
