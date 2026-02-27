@@ -74,6 +74,13 @@ button:hover {
 
 #donorName{
   color:#4a90e2;
+ 
+}
+#donorName img{
+margin-left: 50px;
+}
+#donorLocation img{
+margin-left: 50px;
 }
 #donorLocation{
   color: #4a90e2;
@@ -84,8 +91,9 @@ button:hover {
 <body>
   
     <section class="review-form">
-      <h2 id="donorName"></h2>
-      <h4 id="donorLocation"></h4>
+      
+      <h2 id="donorName">Donar Name :<img src="../assets/image.png" alt="" height="30px" width="30px"> </h2>
+      <h3 id="donorLocation">Donar Location :<img src="../assets/image.png" alt="" height="30px" width="30px"></h3  >
       
    <form id="milk-request">
 
@@ -137,13 +145,15 @@ async function loadDonor() {
   if(docSnap.exists()){
     const data = docSnap.data();
 
-    document.getElementById("donorName").textContent =
-      "Donor Name: " + data.name;
-
-    document.getElementById("donorLocation").textContent =
-      "Location: " + data.location;
-
-    donorEmail = data.email;
+   
+      document.getElementById("donorName").textContent =
+        "Donor Name: " + data.name;
+  
+      document.getElementById("donorLocation").textContent =
+        "Location: " + data.location;
+  
+      donorEmail = data.email;
+    
   }
 }
 

@@ -7,7 +7,7 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
-// Firebase config
+
 const firebaseConfig = {
   apiKey: "AIzaSyAiHTQQHFRVap6r5N8XWYXUH7DoigH6SmQ",
   authDomain: "thaaimaicare-donate-form.firebaseapp.com",
@@ -17,11 +17,11 @@ const firebaseConfig = {
   appId: "1:632961605438:web:0a4b32ca65b59aebfe966f"
 };
 
-// Initialize
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// IMPORTANT — correct form id
+
 const form = document.getElementById("donate-form");
 
 form.addEventListener("submit", async (e) => {
@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value.trim();
   const age = document.getElementById("age").value.trim();
   const month = document.getElementById("month").value.trim();
-  const phone = document.getElementById("phone").value.trim();
+  // const phone = document.getElementById("phone").value.trim();
   const location = document.getElementById("location").value.trim();
   const availability = document.getElementById("availability").value;
   const message = document.getElementById("message").value.trim();
@@ -47,7 +47,7 @@ form.addEventListener("submit", async (e) => {
   email,
   age,
   month,
-  phone_number: phone,
+  // phone_number: phone,
   location,
   location_lower: location.toLowerCase(),
   availability,
@@ -57,7 +57,7 @@ form.addEventListener("submit", async (e) => {
 
 console.log("Document ID:", docRef.id);
 
-    alert("✅ Data saved successfully!");
+    alert(" Form saved successfully!");
     form.reset();
 
   } catch (error) {

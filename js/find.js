@@ -32,7 +32,7 @@ function displayDonor(data) {
   btn.textContent = "Contact donor";
   btn.classList.add("contact-btn");
 
-  // pass firebase document id
+  
   btn.addEventListener("click", () => {
     window.location.href = `reviewsendform.html?id=${data.id}`;
   });
@@ -43,7 +43,7 @@ function displayDonor(data) {
     <p><strong>Email:</strong> ${data.email}</p>
     <p><strong>Mother Age:</strong> ${data.age}</p>
     <p><strong>Baby Month:</strong> ${data.month}</p>
-    <p><strong>Phone:</strong> ${data.phone_number}</p>
+  
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Availability:</strong> ${data.availability}</p>
     <p><strong>Message:</strong> ${data.message}</p>
