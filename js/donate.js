@@ -21,7 +21,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-
 const form = document.getElementById("donate-form");
 
 form.addEventListener("submit", async (e) => {
@@ -31,33 +30,34 @@ form.addEventListener("submit", async (e) => {
   const email = document.getElementById("email").value.trim();
   const age = document.getElementById("age").value.trim();
   const month = document.getElementById("month").value.trim();
-  // const phone = document.getElementById("phone").value.trim();
   const location = document.getElementById("location").value.trim();
   const availability = document.getElementById("availability").value;
+  const rchid = document.getElementById("rchid").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  if (!name || !email || !phone || !location || !availability) {
+  if (!name || !email || !age || !month || !location || !availability) {
     alert("Please fill all required fields");
     return;
   }
 
   try {
+
     const docRef = await addDoc(collection(db, "users"), {
-  name,
-  email,
-  age,
-  month,
-  // phone_number: phone,
-  location,
-  location_lower: location.toLowerCase(),
-  availability,
-  message,
-  createdAt: serverTimestamp()
-});
+      name,
+      email,
+      age,
+      baby_month: month,
+      location,
+      location_lower: location.toLowerCase(),
+      availability,
+      rchid,
+      message,
+      createdAt: serverTimestamp()
+    });
 
-console.log("Document ID:", docRef.id);
+    console.log("Document ID:", docRef.id);
 
-    alert(" Form saved successfully!");
+    alert("Form saved successfully!");
     form.reset();
 
   } catch (error) {
@@ -65,5 +65,3 @@ console.log("Document ID:", docRef.id);
     alert(error.message);
   }
 });
-
-

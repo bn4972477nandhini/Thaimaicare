@@ -5,38 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Milk - ThaaimaiCare</title>
     <link rel="stylesheet" href="../styles/donate.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("u-6Nn4TQLR499YjXd");
-      })();
-      window.onload = function (){
-        document
-        .getElementById("donate-form")
-        .addEventListener("submit",function(event){
-          event.preventDefault();
-          emailjs.sendForm
-           ('service_mttbasm',
-                 'template_9zg4a6a',
-                 this
-                ).then(()=>{
-                   emailjs.sendForm(
-                        'service_mttbasm',
-                        'template_kseyqwh',
-                        this);
-                    alert("Message send successfully");
-                    this.reset();
-                },
-                (error)=>{
-                alert("Message failed to send"),console.log(error);
-              }
-            );
-        });
-      };
-    </script>
+  
   </head>
   <body>
     <header class="header">
@@ -49,7 +18,7 @@
       </div>
 
       <div class="header-title">
-        <h2>🤱 Donate Breast Milk</h2>
+        <h2> Donate Breast Milk</h2>
         <p>Share the gift of life — one drop at a time.</p>
       </div>
 
@@ -70,7 +39,7 @@
     </section>
 
     <section class="donate-form-section">
-      <h2>🩷 Fill Out the Donor Form</h2>
+      <h2> Fill Out the Donor Form</h2>
       <p>
         Submit your details and our team will reach out to guide you through the
         safe donation process.
@@ -135,8 +104,8 @@
           <option>I Donate later</option>
         </select>
 
-        <label for="name">RCH Id(12 Digits number)</label>
-      <input type="text" id="name" placeholder="Enter your full name" maxlength="12" />
+        <label for="rch">RCH Id(12 Digits number)</label>
+      <input type="text" id="rchid" placeholder="Enter your Reproductive and Child Health number(12digits)" maxlength="12" />
 
         <label for="message">Message (optional)</label>
         <textarea
@@ -154,12 +123,12 @@
     </section>
 
     <section class="thankyou">
-      <h2>💖 Thank You for Supporting Motherhood</h2>
+      <h2> Thank You for Supporting Motherhood</h2>
       <p>Your kindness makes the world a warmer, safer place for every baby.</p>
     </section>
 
     <footer>
-      <p>© 2025 ThaaimaiCare | Together, We Nurture Life🤱</p>
+      <p> 2025 ThaaimaiCare | Together, We Nurture Life</p>
     </footer>
     <script src="../js/donate.js" type="module"></script>
   </body>

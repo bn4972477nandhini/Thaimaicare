@@ -98,16 +98,16 @@ margin-left: 50px;
    <form id="milk-request">
 
     <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Enter your name" >
+    <input type="text" id="name" placeholder="Enter your name" required >
 
     <label for="phone">Phone</label>
-    <input type="text" id="phone" placeholder="Mobile number">
+    <input type="text" id="phone" placeholder="Mobile number" required maxlength="10">
 
     <label for="email">Email</label>
-    <input type="text" id="email"placeholder="Your Email id">
+    <input type="email" id="email"placeholder="Your Email id" required>
 
-    <label for="message">Message</label>
-    <input type="text" id="message">
+    <label for="message">Message(optional)</label>
+    <input type="text" id="message" >
 
     <button>Submit</button>
 
@@ -170,8 +170,8 @@ document.getElementById("milk-request")
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  if(!donorEmail){
-    alert("Donor email not loaded yet");
+  if (!name || !email || !phone ) {
+    alert("Please fill all required fields");
     return;
   }
 
@@ -185,12 +185,12 @@ document.getElementById("milk-request")
 
   emailjs.send("service_mttbasm", "template_bncv3z6", templateParams)
   .then(()=>{
-    alert("Message sent to donor ✅");
+    alert("Message sent to donor ");
     document.getElementById("milk-request").reset();
   })
   .catch(error=>{
     console.log(error);
-    alert("Failed to send email ❌");
+    alert("Failed to send email ");
   });
 
 });
