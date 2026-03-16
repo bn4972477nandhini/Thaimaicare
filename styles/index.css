@@ -20,9 +20,9 @@
         padding: 10px 30px;
         background-color: #f9fcff;
         box-shadow: 0 4px 20px rgba(135, 206, 250, 0.5);
-        height: 120px;
-        width: 1500px;
-        margin-left: 70px;
+        height: 110px;
+        width: 1350px;
+        margin-left: 65px;
         margin-top: 30px;
         /* font-size: 150px; */
         font-weight: bold;
@@ -36,6 +36,7 @@
         align-items: center;
         gap: 15px;
       }
+      
 
      .logo img {
      width: 65px;
@@ -105,11 +106,11 @@
       }
       .milk{
         margin-top: 30px;
-        margin-left: 800px;
+        margin-left: 700px;
 
       }
       .container{
-        margin-left: 600px; 
+        margin-left: 500px; 
       }
       .container h1{
         margin-left: 50px;
@@ -128,7 +129,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-    margin-left: 300px;
+    margin-left: 250px;
     gap: 20px;
 
       } 
@@ -139,10 +140,10 @@
         display: grid;
         gap: 50px;
         grid-template-columns:1fr 1fr 1fr ;
-        grid-template-rows: 50px 50px 50px;
-        margin-top: 40px ;
+        /* grid-template-rows: 50px 50px 50px; */
+        /* margin-top: 40px ; */
         font-size: 20px;
-        padding: 30px;
+        padding: 20px;
         align-items: center;
         
       }
@@ -166,29 +167,23 @@
       } 
 
 .foot{ 
+  margin-top: 40px;
    display: flex;
    justify-content: center;
    gap: 30px;
-   /* margin-top: 40px ;  */
    font-size: 20px; 
-   /* padding: 20px; */
- /* text-align: center; */
-  background-color: white;
-  /* height: 250px; */
-  /* width: 1600px;
-  border-radius: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;  */
+   background-color: white;
+   margin-bottom: 10px;
+
+ 
  } 
 .foot a{
   text-decoration: none;
-  margin-top: 50px;
-  margin-left: 70px;
   color: black;
-  /* color:rgb(219, 66, 138);  */
-  font-size: 22px;
+  padding: 20px;
+  font-size: 20px;
   font-weight: bold;
+  
 }
 
 

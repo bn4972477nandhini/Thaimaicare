@@ -25,8 +25,6 @@ const db = getFirestore(app);
 
 
 
-
-
 const form = document.getElementById("RS-form");
 const reviewContainer = document.getElementById("reviewContainer");
 
@@ -53,10 +51,6 @@ form.addEventListener("submit",(e)=>{
       alert(error.message);
     }
   });
-
-
-
-
 
 
 async function loadReviews(){

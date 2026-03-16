@@ -21,8 +21,8 @@ body {
   /* flex-wrap: wrap; */
   border-radius: 10px;
   margin-top: 20px;
-  width: 1600px;
-  margin-left: 30px;
+  width: 1400px;
+  margin-left: 40px;
  
 }
 
@@ -92,13 +92,13 @@ body {
   height: 350px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-left: 500px;
+  margin-left: 410px;
   
 }
 .text{
   background-color: #f9fcff;
   padding: 60px 90px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
  
   
   
@@ -111,7 +111,7 @@ body {
 .importance{
   background-color: #f9fcff;
   padding: 30px 60px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin-left: 55px;
   margin-right: 55px;
 }
@@ -188,5 +188,7 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  border-radius: 15px 15px 0 0;
+  width: 1430px;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }

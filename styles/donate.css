@@ -14,8 +14,8 @@ body{
   flex-wrap: wrap;
   border-radius: 10px;
   margin-top: 30px;
-  width: 1530px;
-  margin-left: 30px;
+  width: 1350px;
+  margin-left: 40px;
  
 }
 
@@ -111,7 +111,7 @@ color: green;
   padding: 40px;
   background-color:rgb(223, 231, 236);
   width: 700px;
-  margin-left: 450px;
+  margin-left: 350px;
   border-radius: 30px;
 }
 
@@ -185,5 +185,9 @@ footer {
   background-color: white;
   padding: 12px;
   color: #333;
+  width: 1400px ;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
 }
 
