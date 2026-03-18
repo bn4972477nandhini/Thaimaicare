@@ -113,6 +113,9 @@ body {
 }
 
 .donor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   width: 350px;
   padding: 20px 25px;
@@ -141,8 +144,24 @@ box-shadow: 0 5px 5px slategray;
 color: rgb(200, 12, 43);
 border: 1px solid slategray;
 font-size: 16px;
-margin-left: 90px;
+/* margin-left: 90px; */
+justify-content: center;
+font-weight: bold;
 
 
 
 }
+.rch-note{
+  font-size: 13px;
+  color: #666;
+}
+
+.rch-note a{
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.rch-note a:hover{
+  text-decoration: underline;
+}
+

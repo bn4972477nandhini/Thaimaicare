@@ -43,7 +43,11 @@ function displayDonor(data) {
     <p><strong>Email:</strong> ${data.email}</p>
     <p><strong>Mother Age:</strong> ${data.age}</p>
     <p><strong>Baby Month:</strong> ${data.month}</p>
-  
+     <p class="rch-note"><strong>Rch Id:</strong> ${data.rchid}
+      <a href="https://rch.nhm.gov.in/RCH/" target="_blank">
+      Click here to verify RCH ID in official platform
+      </a></p>
+
     <p><strong>Location:</strong> ${data.location}</p>
     <p><strong>Availability:</strong> ${data.availability}</p>
     <p><strong>Message:</strong> ${data.message}</p>
